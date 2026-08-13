@@ -16,4 +16,4 @@ En este proyecto espero aprender a:
 
 ## Tecnologías / Herramientas
 * **Git & GitHub** (Control de versiones)
-* **Markdown** (Documentación).
+* **Markdown** (Documentación)
