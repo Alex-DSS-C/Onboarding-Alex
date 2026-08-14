@@ -3,44 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biblioteca Digital </title>
+  <title>Biblioteca Digital Tec D</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <header>
-    <div class="header-inner">
-      <p class="eyebrow">Lectura • conocimiento • comunidad</p>
-      <h1>Biblioteca Digital Alex</h1>
-      <nav aria-label="Navegación principal">
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
+    <div class="topbar">
+      <p class="eyebrow">Colección digital • lectura inteligente</p>
+      <h1>Biblioteca NeoLiteraria</h1>
     </div>
-  </header>
-
-  <main id="inicio">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="tag">Biblioteca digital</p>
-        <h2>Descubre un espacio para leer, aprender y crecer.</h2>
-        <p>
-          Nuestra biblioteca digital está diseñada para facilitar el acceso a una amplia colección de libros, documentos y recursos educativos desde cualquier lugar.
-        </p>
-        <p>
-          Explora nuestras categorías principales, consulta la disponibilidad de títulos y gestiona tus préstamos de manera rápida y sencilla.
-        </p>
-      </div>
-    </section>
-
-    <section id="catalogo" class="services">
-      <h3>Servicios destacados</h3>
+    <nav aria-label="Navegación principal">
       <ul>
-        <li>Consulta y búsqueda de catálogo de libros.</li>
-        <li>Préstamo y devolución de libros digitales.</li>
-        <li>Gestión de usuarios y registros de lectura.</li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </section>
 
@@ -67,17 +45,37 @@
           <input type="tel" id="telefono" name="telefono" placeholder="1234567890">
         </div>
 
-        <button type="submit" class="btn-enviar">Enviar solicitud</button>
-        <p id="errores" class="errores" aria-live="polite"></p>
-        <p id="exito" class="exito" aria-live="polite"></p>
-      </form>
+  <main id="inicio">
+    <section class="hero-panel">
+      <div class="hero-copy">
+        <p class="section-tag">Acceso a conocimiento</p>
+        <h2>Descubre historias, ideas y nuevas formas de aprender.</h2>
+        <p>
+          Nuestra biblioteca digital reúne una selección cuidada de libros, documentos y recursos educativos para facilitar la lectura desde cualquier lugar y en cualquier momento.
+        </p>
+        <p>
+          Explora categorías, consulta títulos disponibles y disfruta de una experiencia fluida para estudiantes, lectores y amantes del conocimiento.
+        </p>
+      </div>
+
+      <div class="cta-panel">
+        <button id="btn-bienvenida" type="button">Mostrar saludo</button>
+        <p id="mensaje" aria-live="polite">Te saluda tu amigo Lex C'x</p>
+      </div>
+    </section>
+
+    <section class="features" id="catalogo">
+      <h3>Servicios destacados</h3>
+      <ul>
+        <li>Búsqueda inteligente por tema, autor y categoría.</li>
+        <li>Préstamo y devolución de lectura digital en segundos.</li>
+        <li>Recomendaciones personalizadas para cada lector.</li>
+      </ul>
     </section>
   </main>
 
-  <footer>
+  <footer id="contacto">
     <p>Creado por Lex C'x</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

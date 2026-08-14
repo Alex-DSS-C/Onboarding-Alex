@@ -1,29 +1,11 @@
 const boton = document.querySelector("#btn-bienvenida");
 const mensaje = document.querySelector("#mensaje");
-const formulario = document.querySelector("#form-biblioteca");
-const errorBox = document.querySelector("#errores");
-const exitoBox = document.querySelector("#exito");
 
 console.log("Biblioteca cargada correctamente.");
 
-if (exitoBox) {
-  exitoBox.textContent = "";
-}
-
-function ocultarMensajeTrasTiempo(elemento, textoInicial, tiempo = 10000) {
-  if (!elemento) return;
-
-  const valorOriginal = elemento.textContent;
-  elemento.textContent = textoInicial;
-
-  setTimeout(function () {
-    elemento.textContent = valorOriginal;
-  }, tiempo);
-}
-
 if (boton && mensaje) {
   boton.addEventListener("click", function () {
-    mensaje.textContent = "¡Gracias por visitar la Biblioteca Digital Alex! Que tengas una excelente lectura.";
+    mensaje.textContent = "¡Gracias por visitar la Biblioteca NeoLiteraria! Que tengas una excelente lectura.";
     mensaje.style.color = "#8ef0ff";
     mensaje.style.fontWeight = "700";
     mensaje.style.transform = "translateY(-2px)";
