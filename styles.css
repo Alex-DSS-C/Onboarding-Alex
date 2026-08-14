@@ -201,6 +201,54 @@ main {
   color: var(--cyan);
 }
 
+.books-section {
+  margin-top: 28px;
+  background: rgba(8, 17, 22, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 24px;
+}
+
+.books-section h3 {
+  margin: 0 0 18px;
+  font-size: 1.6rem;
+  color: #f3fbff;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.book-item {
+  background: rgba(14, 29, 37, 0.9);
+  border: 1px solid rgba(146, 222, 255, 0.2);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.book-item h4 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #f4fbff;
+}
+
+.book-item p {
+  margin: 6px 0;
+  color: var(--muted);
+}
+
+.error-message {
+  margin: 0;
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(255, 87, 87, 0.08);
+  border: 1px solid rgba(255, 128, 128, 0.35);
+  color: #ffd1d1;
+  font-weight: 600;
+}
+
 footer {
   text-align: center;
   padding: 22px 16px 30px;
