@@ -1,6 +1,9 @@
 const boton = document.querySelector("#btn-bienvenida");
 const mensaje = document.querySelector("#mensaje");
 const listaLibros = document.querySelector("#lista-libros");
+const formulario = document.querySelector("#form-biblioteca");
+const errorBox = document.querySelector("#errores");
+const exitoBox = document.querySelector("#exito");
 
 console.log("Biblioteca cargada correctamente.");
 
@@ -47,7 +50,51 @@ if (boton && mensaje) {
     boton.textContent = "Saludo activado";
     boton.disabled = true;
     boton.style.opacity = "0.8";
+
+    setTimeout(function () {
+      mensaje.textContent = "Te saluda tu amigo Lex C'x";
+      mensaje.style.color = "";
+      mensaje.style.fontWeight = "";
+      mensaje.style.transform = "";
+      boton.textContent = "Mostrar saludo";
+      boton.disabled = false;
+      boton.style.opacity = "";
+    }, 6000);
   });
 }
 
 cargarLibros();
+
+if (formulario) {
+  formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nombre = document.querySelector("#nombre").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const telefono = document.querySelector("#telefono").value.trim();
+    const errores = [];
+
+    if (exitoBox) exitoBox.textContent = "";
+
+    if (!nombre || !email || !telefono) {
+      errores.push("Todos los campos son obligatorios.");
+    }
+    if (email && (!email.includes("@") || !email.includes("."))) {
+      errores.push("El correo debe contener @ y un punto.");
+    }
+    if (telefono && telefono.length !== 10) {
+      errores.push("El teléfono debe tener exactamente 10 dígitos.");
+    }
+
+    if (errorBox) errorBox.textContent = errores.join(" ");
+
+    if (errores.length === 0) {
+      if (exitoBox) exitoBox.textContent = "¡Solicitud enviada correctamente!";
+      if (errorBox) errorBox.textContent = "";
+      formulario.reset();
+      setTimeout(function () {
+        if (exitoBox) exitoBox.textContent = "";
+      }, 8000);
+    }
+  });
+}
