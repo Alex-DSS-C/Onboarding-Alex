@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biblioteca Digital Tec D</title>
+  <title>Biblioteca Digital NeoLiteraria</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -51,10 +52,12 @@
         <p class="section-tag">Acceso a conocimiento</p>
         <h2>Descubre historias, ideas y nuevas formas de aprender.</h2>
         <p>
-          Nuestra biblioteca digital reúne una selección cuidada de libros, documentos y recursos educativos para facilitar la lectura desde cualquier lugar y en cualquier momento.
+          Nuestra biblioteca digital reúne una selección cuidada de libros, documentos y recursos educativos para
+          facilitar la lectura desde cualquier lugar y en cualquier momento.
         </p>
         <p>
-          Explora categorías, consulta títulos disponibles y disfruta de una experiencia fluida para estudiantes, lectores y amantes del conocimiento.
+          Explora categorías, consulta títulos disponibles y disfruta de una experiencia fluida para estudiantes,
+          lectores y amantes del conocimiento.
         </p>
       </div>
 
@@ -72,10 +75,33 @@
         <li>Recomendaciones personalizadas para cada lector.</li>
       </ul>
     </section>
+
+    <section class="books-section" aria-live="polite">
+      <h3>Catálogo de libros</h3>
+      <div id="lista-libros" class="book-list"></div>
+    </section>
+
+    <section class="form-section" id="contacto">
+      <h3>Solicita una tarjeta de préstamo</h3>
+      <form id="form-biblioteca" novalidate>
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej. Alex García">
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="1234567890">
+        <button type="submit" class="btn-enviar">Solicitar préstamo</button>
+        <p class="errores" id="errores" aria-live="polite"></p>
+        <p class="exito" id="exito" aria-live="polite"></p>
+      </form>
+    </section>
   </main>
 
-  <footer id="contacto">
+  <footer>
     <p>Creado por Lex C'x</p>
   </footer>
 </body>
+
 </html>
