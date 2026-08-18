@@ -81,33 +81,22 @@ if (formulario) {
     if (!nombre || !email || !telefono) {
       errores.push("Todos los campos son obligatorios.");
     }
-
     if (email && (!email.includes("@") || !email.includes("."))) {
       errores.push("El correo debe contener @ y un punto.");
     }
-
     if (telefono && telefono.length !== 10) {
       errores.push("El teléfono debe tener exactamente 10 dígitos.");
     }
 
-    if (errorBox) {
-      errorBox.textContent = errores.join(" ");
-    }
+    if (errorBox) errorBox.textContent = errores.join(" ");
 
     if (errores.length === 0) {
-      if (exitoBox) {
-        exitoBox.textContent = "¡Solicitud enviada correctamente!";
-      }
-      if (errorBox) {
-        errorBox.textContent = "";
-      }
+      if (exitoBox) exitoBox.textContent = "¡Solicitud enviada correctamente!";
+      if (errorBox) errorBox.textContent = "";
       formulario.reset();
-
       setTimeout(function () {
-        if (exitoBox) {
-          exitoBox.textContent = "";
-        }
-      }, 10000);
+        if (exitoBox) exitoBox.textContent = "";
+      }, 8000);
     }
   });
 }
