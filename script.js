@@ -53,17 +53,15 @@ if (boton && mensaje) {
 
     setTimeout(function () {
       mensaje.textContent = "Te saluda tu amigo Lex C'x";
-      mensaje.style.color = "";
-      mensaje.style.fontWeight = "";
-      mensaje.style.transform = "";
+      mensaje.style.color = "#dffcff";
+      mensaje.style.fontWeight = "700";
+      mensaje.style.transform = "translateY(0)";
       boton.textContent = "Mostrar saludo";
       boton.disabled = false;
-      boton.style.opacity = "";
-    }, 6000);
+      boton.style.opacity = "1";
+    }, 10000);
   });
 }
-
-cargarLibros();
 
 if (formulario) {
   formulario.addEventListener("submit", function (event) {
@@ -74,7 +72,9 @@ if (formulario) {
     const telefono = document.querySelector("#telefono").value.trim();
     const errores = [];
 
-    if (exitoBox) exitoBox.textContent = "";
+    if (exitoBox) {
+      exitoBox.textContent = "";
+    }
 
     if (!nombre || !email || !telefono) {
       errores.push("Todos los campos son obligatorios.");
