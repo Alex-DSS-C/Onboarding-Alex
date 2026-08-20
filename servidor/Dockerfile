@@ -1,4 +1,4 @@
-# ── Stage 1: Build ──────────────────────────────────────────────────────────
+# stage 1: build
 FROM node:22-alpine AS builder
 
 WORKDIR /app/servidor
@@ -11,7 +11,7 @@ RUN npm ci
 COPY servidor/ .
 RUN npm run build
 
-# ── Stage 2: Production ──────────────────────────────────────────────────────
+# stage 2: build
 FROM node:22-alpine AS production
 
 # La app espera el frontend en __dirname/../.. desde dist/index.js

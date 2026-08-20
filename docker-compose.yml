@@ -9,13 +9,13 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
-      - "5433:5432"          # 5433 en el host para no chocar con Postgres local
+      - "5433:5432" # 5433 en el host para no chocar con Postgres local
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./servidor/DB/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql
       - ./servidor/DB/seed.sql:/docker-entrypoint-initdb.d/02_seed.sql
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d biblioteca_db"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d biblioteca_db" ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -23,7 +23,7 @@ services:
   # ── Servicio: Servidor Node.js / Express ─────────────────────────────────────
   app:
     build:
-      context: .                  # raíz del proyecto
+      context: . # raíz del proyecto
       dockerfile: servidor/Dockerfile
     container_name: biblioteca_app
     restart: unless-stopped
@@ -33,7 +33,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DB_HOST: db                 # nombre del servicio en la red Docker
+      DB_HOST: db # nombre del servicio en la red Docker
       DB_PORT: 5432
       DB_NAME: biblioteca_db
       DB_USER: postgres
