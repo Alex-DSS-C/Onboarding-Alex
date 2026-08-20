@@ -1,7 +1,7 @@
-Create Table Libros
+CREATE TABLE IF NOT EXISTS libros
 (
-id serial primary key,
-Titulo varchar(50),
-Autor varchar(50),
-Anio int not null
+    id     SERIAL PRIMARY KEY,
+    titulo VARCHAR(50)  NOT NULL,
+    autor  VARCHAR(50)  NOT NULL,
+    anio   INT          NOT NULL
 );

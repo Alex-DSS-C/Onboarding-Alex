@@ -1,0 +1,10 @@
+# Dependencias y build
+servidor/node_modules/
+servidor/dist/
+
+# Variables de entorno (contienen contraseñas)
+.env
+servidor/.env
+
+# Volumen de datos de Docker
+postgres_data/

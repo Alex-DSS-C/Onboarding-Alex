@@ -1,0 +1,6 @@
+# Ignorar dependencias y archivos locales en el contexto de Docker
+servidor/node_modules
+servidor/dist
+servidor/.env
+.git
+*.md
