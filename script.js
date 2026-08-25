@@ -11,7 +11,7 @@ async function cargarLibros() {
   if (!listaLibros) return;
 
   try {
-    const respuesta = await fetch("http://localhost:3000/api/libros");
+    const respuesta = await fetch("/api/libros");
 
     if (!respuesta.ok) {
       throw new Error("Servidor no disponible");
@@ -30,7 +30,7 @@ async function cargarLibros() {
           <article class="book-item">
             <h4>${libro.titulo}</h4>
             <p><strong>Autor:</strong> ${libro.autor}</p>
-            <p><strong>Categoría:</strong> ${libro.categoria}</p>
+            <p><strong>Año:</strong> ${libro.anio}</p>
           </article>
         `
       )
