@@ -14,6 +14,13 @@ En este proyecto espero aprender a:
 
 ---
 
+## 🌐 Demo en vivo (Railway)
+> **Nota:** Esta es una demostración temporal desplegada en Railway usando el crédito de prueba (trial). La app estará disponible por tiempo limitado.
+
+* **URL de la Demo:** [https://onboarding-alex-production-57b3.up.railway.app](https://onboarding-alex-production-57b3.up.railway.app)
+
+---
+
 ## Tecnologías / Herramientas
 * **Git & GitHub** (Control de versiones)
 * **Markdown** (Documentación)

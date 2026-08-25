@@ -1,5 +1,5 @@
 services:
-  # ── Servicio: Base de datos PostgreSQL ──────────────────────────────────────
+  # Servicio: Base de datos PostgreSQL
   db:
     image: postgres:16-alpine
     container_name: biblioteca_db
